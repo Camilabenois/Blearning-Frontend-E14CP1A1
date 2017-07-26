@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form>
+			<label name="first_name_label">First name:</label>
+			<br>
+			<input type="text" name="firstname">
+			<br>
+			Last name:
+			<br>
+			<input type="text" name="lastname">
+			<br>
+			<input type="radio" name="sex" value="male" checked>Male
+			<br>
+			<input type="radio" name="sex" value="female">Female
+			<br>
+			Favorite day of the week:
+			<br>
+			    <select name="fav_day">
+			        <option value="Friday">Friday</option>
+			        <option value="Saturday">Saturday</option>
+			        <option value="Monday">Monday</option>
+			    </select>
+			<br>
+	</form>
+
+<br><br>
+    
+	<form>
+			What's your major:
+			<br>
+			<input type="text" name="major">
+			<br>
+			What's your job title:
+			<br>
+			<input type="text" name="job_title">
+			<br>
+
+			Do you like challenges:
+			<br>
+			<input type="radio" name="challenge" value="yes" checked>Yes
+			<br>
+			<input type="radio" name="challenge" value="no">No
+			</form>
+<script
+  src="http://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>	
+ <script>
+ 	// 1. Pon tu nombre al atributo value del campo first name
+  	$('input[name=firstname]').val("CAMILA");
+  	// 2. Pon el valor a la pregunta Favorite Day of Week a Monday
+  	$('select[name=fav_day]').val("Monday");
+  	// 3. Cambia la etiqueta de First name a 'Tu nombre'
+  	$('label[name="first_name_label"]').text("Tu nombre");
+  	// 4. Obtén el valor del atributo 'name' del campo Favorite Day of The Week
+  	var x = $('select').attr('name');
+  	console.log(x);
+  	// 5. Escoge la opción Female de la pregunta de género
+  	$ ('input:radio[value=female]').prop('checked',true);
+  	// 6. Encuentra la primera form del documento y pon el atributo name = personal_info
+  	$('form').first().attr('name','personal_info');
+  	// 7. Encuentra la primera form del documento y pon el atributo name = job_info
+  	$('form').last().attr('name','job_info');
+  </script>		
+	
+</body>
+</html>

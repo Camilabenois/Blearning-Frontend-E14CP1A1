@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	
+	var calcularIMC = function(peso, estatura){
+		return peso / (estatura * estatura);
+	}
+
+	var interpretarIMC = function(peso, estatura){
+		var imc = calcularIMC(peso, estatura);
+		if (imc > 24){
+			return "sobrepeso";
+		} else if (imc > 19) {
+			return "ok";
+		} else {
+			return "bajo peso";
+		}
+	}
+	resultado = interpretarIMC(95,1.80);
+	console.log(resultado);
+</script>	
+</body>
+</html>
